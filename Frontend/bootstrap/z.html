@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Modal Box</title>
+    <linkrel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="z.css"
+  />
+  </head>
+  <body>
+    <div class="modal-container">
+      <button class="modal-button show">Show Modal</button>
+      <span class="modal-overlay"></span>
+
+      <div class="modal-content">
+        <i class="fa-regular fa-circle-check"></i>
+        <h2>Warning!</h2>
+        <h3>Upcoming appointment detected. Do you still want to continue?</h3>
+
+        <div class="buttons">
+          <button class="modal-button close-btn">No</button>
+          <button class="modal-button">Yes</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="z.js"></script>
+  </body>
+</html>

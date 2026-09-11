@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    padding-top: 80px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('picture/loginbackground.webp') no-repeat center center/cover;
+    filter: blur(3px) brightness(60%);
+    z-index: -1; 
+}
+
+
+.container,
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+  .header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+  }
+  
+  .logo {
+    font-size: 32px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .navbar .toggle-btn {
+    padding: 0.7em 2em;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    z-index: 1;
+
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+
+
+.navbar button::before {
+
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  border-radius: 7px;
+  background-color: #D9CECC;
+  z-index: -1;
+  
+}
+
+.navbar button:hover, button:focus {
+  color: white;
+}
+
+.navbar button:hover:before, button:focus:before {
+
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.navbar button:active {
+
+  transform: scale(0.9);
+}
+  
+  
+  .navbar .toggle-btn:hover {
+    color: white;
+    background-color: #5C4E4E;
+  }
+
+.container {
+
+    margin-top: 50px;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.form-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    transition: transform 0.5 ease;
+
+}
+
+.input-group {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 40px;
+    width: 100%;
+}
+
+#login,
+#signup {
+    width: 500%;
+}
+
+.input-group.active {
+    display: flex;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-field:focus {
+    border-color: #6C63FF;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #6C63FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: #574bcd;
+}
+
+h2 {
+    color: #6C63FF;
+    margin-bottom: 20px;
+}
+
+h6 {
+    color: #6C63FF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+span {
+    margin-top: 10px;
+    text-align: center; 
+}
+.create-account {
+    margin-top: 10px; 
+    text-align: center; 
+    color: #6C63FF;
+    text-decoration: none;
+    font-weight: bold; 
+    transition: color 0.3s ease;
+    
+}
+
+.create-account:hover {
+    color: #574bcd;
+}
+.toggle-link {
+    color: #6C63FF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.toggle-link:hover {
+    color: #574bcd;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 30px;
+    }
+    .logo {
+        font-size: 28px;
+    }
+    .navbar .toggle-btn {
+        padding: 0.3em 1em;
+    }
+}
+
+@media (max-width: 630px) {
+    .navbar .toggle-btn {
+        padding: 0.3em 0.8em;
+        font-size: 12px;
+    }
+} 

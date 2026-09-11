@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar button {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar button a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar button:hover {
+  background-color: #5C4E4E;
+  color: white;
+}
+
+.navbar button:hover a {
+  color: white;
+}
+.navbar button:hover, button:focus {
+  color: white;
+}
+
+.navbar button:hover:before, button:focus:before {
+
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.navbar button:active {
+
+  transform: scale(0.9);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #2b4f4f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.sidebar .profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.sidebar h2 {
+  margin-top: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #226666;
+  color: white;
+  padding: 10px;
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  
+}
+
+.about-section, .booking {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2, .booking h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #226666;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .sidebar {
+      width: 100%;
+      text-align: left;
+  }
+
+  .nav-bar {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  table th, table td {
+      font-size: 12px;
+  }
+
+  .sidebar {
+      display: none;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="adminuser.css">
+    <title>Admin User Accounts</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-pic">
+                <i class="fa-solid fa-user-circle fa-5x" style="color: #ccc;"></i>
+            </div>        
+            <h2>ADMIN PAGE</h2>
+            <nav>
+                <ul>
+                    <li><a href="adminappoint.html">Appointments</a></li>
+                    <li><a href="adminuser.html">User Accounts</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="about-section">
+                <h2>User Accounts</h2>
+                <table id="clientsTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Gender</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+        fetch('https://localhost:7206/api/ClientInfo/getAllClientDetails', {
+            method: 'GET',
+            headers: {
+                'Accept': '*/*'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Clients data:", data); 
+
+            if (!data || data.length === 0) {
+                console.log("No data returned from the API");
+                return; 
+            }
+
+            const tableBody = document.querySelector('#clientsTable tbody');
+            data.forEach(client => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${client.clientName}</td>
+                    <td>${client.clientGender}</td>
+                    <td>${client.clientEmail}</td>
+                    <td>${client.clientAge}</td>
+                    <td>${client.clientNumber}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+
+            $('#clientsTable').DataTable();
+        })
+        .catch(error => {
+            console.error('Error fetching clients:', error);
+            alert("An error occurred while loading clients.");
+        });
+    </script>
+</body>
+</html>

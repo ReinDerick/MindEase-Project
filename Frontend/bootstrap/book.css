@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative; 
+    margin: 0;
+    padding-top: 80px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('picture/loginbackground.webp') no-repeat center center/cover;
+    filter: blur(2px);
+    z-index: -1; 
+}
+
+
+.container,
+.header {
+    position: relative;
+    z-index: 1;
+}
+  .header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+
+    font-size: 35px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar button {
+
+    padding: 0.7em 2em;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.navbar button a{
+
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+
+}
+
+.navbar button::before {
+
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 7px;
+    background-color: #D9CECC;
+    z-index: -1;
+    
+}
+
+.navbar button:hover, button:focus {
+    color: white;
+}
+
+.navbar button:hover:before, button:focus:before {
+
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.navbar button:active {
+
+    transform: scale(0.9);
+}
+  
+  .booking-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="date"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #6C63FF;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6C63FF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #574bcd;
+  }
+
+  @media (max-width: 1024px) {
+
+    .logo {
+
+        font-size: 30px;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .navbar button {
+
+        padding: 0.4em 2em;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 815px) {
+
+    .logo {
+
+        font-size: 28px;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    
+    .navbar button {
+
+        padding: 1px 2em;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .navbar button a{
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+}
+
+@media (max-width: 630px) { 
+
+      
+    .navbar button {
+
+        padding: 1px 2em;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .navbar button a{
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+}
+
+@media (max-width: 600px) {
+  .booking-container {
+      padding: 20px;
+      width: 90%; 
+  }
+}
+
+@media (max-width: 550px) {
+
+
+    .header {
+        padding: 20px 20px;
+    }
+    .logo {
+
+        display: flex;
+        font-size: 26px;
+
+    }
+
+       
+    .navbar button {
+
+        padding: 1px 2em;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .navbar button a{
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+     
+}
+
+
+@media (max-width: 505px) {
+
+    .header {
+        padding: 20px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar button {
+        padding: 0.2em 1em;
+        font-size: 12px;
+        width: auto;
+    }
+
+    .navbar button a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+}

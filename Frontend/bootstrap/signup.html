@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MindEase - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<!-- Ensure you include jQuery in your HTML -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+    $('#signup').on('submit', function (e) {
+        e.preventDefault(); // Prevent form from reloading the page
+
+        const data = {
+            clientFirstname: $('.input-field[placeholder="First Name"]').val(),
+            clientLastName: $('.input-field[placeholder="Last Name"]').val(),
+            clientEmail: $('.input-field[placeholder="Email"]').val(),
+            clientUsername: $('.input-field[placeholder="Username"]').val(),
+            clientPassword: $('.input-field[placeholder="Password"]').val(),
+            clientAge: parseInt($('.input-field[placeholder="Age"]').val(), 10),
+            clientNumber: $('.input-field[placeholder="Phone Number"]').val(),
+            clientGender: $('select.input-field').val() // Specific to <select> element
+        };
+
+        $.ajax({
+            url: 'https://localhost:7206/api/ClientInfo/SignUp',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(data), // Ensure data is serialized as JSON
+            success: function (response) {
+                if (response && response.message) {
+                    alert(response.message); // Display success message
+                    window.location.href = "login.html"; // Redirect to login page
+                } else {
+                    alert('Sign Up successful, but no message returned.');
+                }
+            },
+            error: function (xhr, status, error) {
+                alert('Sign Up failed: ' + (xhr.responseJSON?.message || error));
+                console.error('Error:', xhr);
+            }
+        });
+    });
+});
+
+</script>
+
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">MindEase</a>
+        <nav class="navbar">
+            <a href="login.html" class="toggle-btn">Log In</a>
+            <a href="signup.html" class="toggle-btn">Sign Up</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-box">
+            <form id="signup" class="input-group active">
+                <h2>Create a new account</h2>
+                <h6>It’s quick and easy.</h6>
+                <input type="text" class="input-field" placeholder="First Name" required>
+                <input type="text" class="input-field" placeholder="Last Name" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <input type="text" class="input-field" placeholder="Username" required>
+                <input type="password" class="input-field" placeholder="Password" required>
+                <input type="number" class="input-field" placeholder="Age" required>
+                <input type="tel" class="input-field" placeholder="Phone Number" required>
+                <select class="input-field" required>
+                    <option value="" disabled selected>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer_not_to_say">Prefer not to say</option>
+                </select>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <span>Already have an account?</span>
+                <a href="login.html" class="toggle-link">Log In</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

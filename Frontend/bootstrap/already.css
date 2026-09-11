@@ -1,0 +1,1172 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+    
+
+.header {
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+
+    font-size: 35px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar button {
+
+    padding: 0.7em 2em;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.navbar button a{
+
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+
+}
+
+.navbar button::before {
+
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 7px;
+    background-color: #D9CECC;
+    z-index: -1;
+    
+}
+
+.navbar button:hover, button:focus {
+    color: white;
+}
+
+.navbar button:hover:before, button:focus:before {
+
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.navbar button:active {
+
+    transform: scale(0.9);
+}
+
+.containertext {
+
+    display: grid;
+    width: 550px;
+    gap: 1rem;
+    
+}
+
+.containertext h2 {
+
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.containertext p {
+
+    font-size: 23px;
+}
+
+.container {
+
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    
+}
+
+.containertext button {
+
+    padding: 0.7em 2em;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #FF0072;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+.containertext button a{
+
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+
+}
+
+.containertext button::before {
+
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 7px;
+    background-color: #D9CECC;
+    z-index: -1;
+    
+}
+
+.containertext button:hover, button:focus {
+    color: white;
+}
+
+.containertext button:hover:before, button:focus:before {
+
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.containertext button:active {
+
+    transform: scale(0.9);
+}
+
+
+.containerimg img{
+
+    height: 400px;
+    border-radius: 10px;
+}
+
+
+.containerh2 {
+
+    text-align: center;
+    font-size: 40px;
+    padding: 7rem 0;
+    font-weight: 900;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-style: solid;
+
+}
+
+.containertext1 { 
+
+    padding: 2em;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #D9CECC;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    
+}
+
+.containertext1:hover{
+    transform: translateY(-10px);
+}
+
+.container1 {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    
+
+}
+
+
+.containertext1 h3 {
+
+    font-size: 20px;
+    font-weight: bold;
+    COLOR: black;
+}
+
+.containertext1 article {
+
+    position: relative;
+    top: 5%;
+    font-size: 17px;
+    COLOR: black;
+}
+
+.title {
+    font-size: 40px;
+    padding: 7rem 0;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-style: solid;
+   
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+  }
+   
+
+.card {
+
+    padding: 2em;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    background-color: #D9CECC;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.icon {
+
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #A2BCC7;
+}
+
+.card h3 {
+
+    font-size: 20px;
+    font-weight: bold;
+    COLOR: black;
+}
+
+.card p {
+
+
+    position: relative;
+    top: 5%;
+    font-size: 17px;
+    COLOR: black;
+}
+
+.drpage{
+    font-size: 40px;
+    padding: 7rem 0;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-style: solid;
+   
+}
+
+.drpage1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+  }
+   
+
+.drpage2 {
+
+    padding: 2em;
+    background: #D9CECC;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+.drpage2:hover{
+    transform: translateY(-10px);
+}
+
+.drpage2 img {
+
+
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #000000;
+    padding: 3px;
+}
+
+.drpage2 img .image {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.drpage2 h3 {
+
+    font-size: 20px;
+    font-weight: bold;
+    COLOR: black;
+}
+
+.drpage2 article {
+
+
+    position: relative;
+    top: 5%;
+    font-size: 17px;
+    COLOR: black;
+}
+
+.Aboutus {
+
+    font-size: 40px;
+    padding: 7rem 0;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-style: solid;
+
+}
+
+.aboutuscontainer {
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.aboutus1 p{
+
+    width: 1000px;
+    text-align: center;
+    line-height: 2em;
+    font-size: 1.5rem;
+    color: black;
+
+    padding: 2em;
+    background: #D9CECC;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.aboutus1 p:hover {
+
+    transform: translateY(-10px);
+}
+
+.developers {
+
+    font-size: 40px;
+    padding: 7rem 0;
+    font-weight: 900;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-style: solid;
+
+}
+
+.developerscontainer  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.developerscontainer1 {
+
+    padding: 0.5em;
+    background: #f0f0f0;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.developerscontainer1:hover{
+    transform: translateY(-10px);
+}
+
+.developerscontainer img {
+
+
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: black;
+    padding: 3px;
+}
+
+.developerscontainer img .developerscontainer2 {
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+
+.developerscontainer h3 {
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.developerscontainer article {
+
+    text-align: center;
+}
+
+
+.footercontainer {
+
+    background-color: #A9A8AD;
+    padding: 4em;
+    
+}
+.lastpart1 h3 {
+
+   display: flex;
+   justify-content: center;
+   font-weight: bold;
+   font-size: 30px;
+   color: white;
+}
+
+.lastpart1 p {
+
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+ }
+
+
+@media (max-width: 1250px) {
+
+    .container {
+
+        display: flex;
+        gap: 1rem;
+
+    }
+    .containertext {
+
+        display: grid;
+        width: 500px;
+
+    }
+
+    .containerimg img{
+        
+        height: 350px;
+        border-radius: 10px;  
+    } 
+    
+    .container1 {
+
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        gap: 15px;
+        justify-content: center;
+    
+    }
+
+    .containerh2 {
+
+        text-align: center;
+        font-size: 35px;
+        padding: 3rem;
+    
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .title, .drpage, .Aboutus, .developers {
+        font-size: 40px;
+        padding: 7rem 0;
+        font-weight: 700;
+        text-align: center;
+       
+    }
+
+    .drpage1{
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+    .aboutus1 p {
+
+        width: 800px;
+        text-align: center;
+        line-height: 2em;
+        font-size: 1.3rem;
+        color: black;
+    }
+
+    .developerscontainer {
+        display: grid;
+        grid-template-columns: repeat(1, 600px);
+        gap: 15px;
+        justify-content: center;
+    }
+  
+}
+
+@media (max-width: 1024px) {
+
+    .logo {
+
+        font-size: 30px;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .navbar button {
+
+        padding: 0.4em 2em;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .container {
+
+        display: grid;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .containertext {
+
+        width: 750px;
+    }
+
+    .containertext h2 {
+
+        font-size: 35px;
+    }
+
+    .containertext p {
+
+        font-size: 20px;
+    }
+
+    .containerimg img{
+        
+
+        height: 350px;
+        border-radius: 10px; 
+        
+    } 
+
+    .containertext button {
+
+        padding: 0.4em 2em;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+    
+    .containertext button a{
+    
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+
+    .container1 {
+
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        gap: 15px;
+        justify-content: center;
+    
+    }
+
+    .containerh2 {
+
+        text-align: center;
+        font-size: 30px;
+        padding: 3rem;
+    
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .title, .drpage, .Aboutus, .developers {
+        text-align: center;
+        font-size: 30px;
+        padding: 3rem;
+       
+    }
+
+    .drpage1{
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+    .aboutus1 p {
+
+        width: 700px;
+        text-align: center;
+        line-height: 2em;
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    .developerscontainer {
+        display: grid;
+        grid-template-columns: repeat(1, 500px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 815px) {
+
+    .logo {
+
+        font-size: 28px;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    
+    .navbar button {
+
+        padding: 1px 2em;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .navbar button a{
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+
+    
+    .container {
+
+        display: grid;
+        gap: 3rem;
+        align-items: center;
+        
+    }
+
+    .containertext {
+
+
+        width: 550px;
+        
+    }
+
+    .containertext h2 {
+
+        font-size: 33px;
+    }
+
+    .containertext p {
+
+        font-size: 18px;
+    }
+
+    .containertext button {
+
+        padding: 0.3em 2em;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+    
+    .containertext button a{
+    
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+
+    .container1 {
+
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        gap: 15px;
+        justify-content: center;
+    
+    }
+
+    .containerh2 {
+
+        text-align: center;
+        font-size: 28px;
+        padding: 3rem;
+    
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .title, .drpage, .Aboutus, .developers {
+        text-align: center;
+        font-size: 28px;
+        padding: 3rem;
+       
+    }
+    .drpage1{
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+    .aboutus1 p {
+
+        width: 600px;
+        text-align: center;
+        line-height: 2em;
+        font-size: 1rem;
+        color: black;
+    }
+
+    .developerscontainer {
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 630px) { 
+
+      
+    .navbar button {
+
+        padding: 1px 2em;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .navbar button a{
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+
+    .container1 {
+
+        display: grid;
+        grid-template-columns: repeat(2, 250px);
+        gap: 15px;
+        justify-content: center;
+    
+    }
+
+    .containerh2 {
+
+        text-align: center;
+        font-size: 25px;
+        padding: 3rem;
+    
+    }
+
+
+      .title, .drpage, .Aboutus, .developers {
+        text-align: center;
+        font-size: 28px;
+        padding: 3rem;
+       
+    }
+
+    .aboutus1 p {
+
+        width: 500px;
+        text-align: center;
+        line-height: 2em;
+        font-size: 1rem;
+        color: black;
+    }
+}
+
+@media (max-width: 550px) {
+
+
+    .header {
+        padding: 20px 20px;
+    }
+    .logo {
+
+        display: flex;
+        font-size: 26px;
+
+    }
+
+       
+    .navbar button {
+
+        padding: 1px 2em;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        color: #FF0072;
+        text-decoration: none;
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .navbar button a{
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+    
+    }
+
+    .container {
+
+        gap: 3rem;
+
+    }
+
+    .containertext {
+
+        display: grid;
+        width: 400px;
+    
+    }
+
+    .containertext h2 {
+        
+        font-size: 30px;
+
+    }
+
+    .containertext p {
+        
+        font-size: 15px;
+    }
+
+    .containerimg img{
+        
+
+        height: 260px;
+        border-radius: 10px; 
+        
+    } 
+
+    .container1 {
+
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 15px;
+        justify-content: center;
+    
+    }
+
+    .containerh2  {
+
+        text-align: center;
+        font-size: 25px;
+        padding: 3rem;
+    
+    }
+
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .title, .drpage, .developers {
+        text-align: center;
+        font-size: 28px;
+        padding: 3rem;
+       
+    }
+
+    .drpage1{
+        display: grid;
+        grid-template-columns: repeat(1, 350px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+    
+       
+}
+
+
+@media (max-width: 505px) {
+
+    .header {
+        padding: 20px 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar button {
+        padding: 0.2em 1em;
+        font-size: 12px;
+        width: auto;
+    }
+
+    .navbar button a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .containertext {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .containertext h2 {
+        font-size: 28px;
+    }
+
+    .containertext p {
+        font-size: 14px;
+    }
+
+    .containertext button {
+        padding: 0.5em 1.5em;
+    }
+
+    .containerimg img {
+        height: 200px;
+    }
+
+    .container1, .card-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .containerh2, .title, .drpage, .Aboutus, .developers {
+        font-size: 24px;
+        padding: 2rem;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .container1 {
+
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+        gap: 15px;
+        justify-content: center;
+    
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 28px;
+        padding: 3rem;
+       
+    }
+
+    .drpage1{
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+        gap: 15px;
+        justify-content: center;
+      }
+
+    .aboutus1 p {
+
+        width: 300px;
+        text-align: center;
+        line-height: 2em;
+        font-size: 0.8rem;
+        color: black;
+    }
+
+    .developerscontainer {
+        display: grid;
+        grid-template-columns: repeat(1, 250px);
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .developerscontainer1 h3 {
+
+        font-size: 17px;
+    }
+
+    .developerscontainer1 article {
+
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+

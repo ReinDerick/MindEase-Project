@@ -88,7 +88,7 @@
                 }
 
                 $.ajax({
-                    url: `https://localhost:7206/api/Booking/CheckAppointment/${clientId}`,
+                    url: `fetch("https://localhost:xxxx/api/...")/${clientId}`,
                     method: 'POST',
                     success: function (response) {
                         if (response.message === "Upcoming appointment detected.") {
